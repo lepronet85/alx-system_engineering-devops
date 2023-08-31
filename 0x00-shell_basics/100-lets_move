@@ -1,2 +1,2 @@
 #!/bin/bash
-cp [A-C,E-Z]* /tmp/u
+mv [[:upper:]]* /tmp/u
