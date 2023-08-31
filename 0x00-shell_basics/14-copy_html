@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -ruv --ignore-existing --include '*/' --include '*.html' --exclude '*' ./ ../
+find . -maxdepth 1 -name "*.html" -newer ../ -exec cp -uv {} ../ \; | sed 's/^/ /'
