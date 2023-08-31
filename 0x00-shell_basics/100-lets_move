@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -u [[:upper:]]*.html /tmp/u
+cp -u [A-Z]*.html /tmp/u
