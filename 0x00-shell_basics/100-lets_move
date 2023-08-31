@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -u [A-Z]* /tmp/u
+cp [A-Z]* /tmp/u
