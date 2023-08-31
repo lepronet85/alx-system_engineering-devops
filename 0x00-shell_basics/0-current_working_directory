@@ -1,3 +1,2 @@
 #!/bin/bash
-pwd ./0x00-shell_basics
-
+pwd ./0x00-shell_basics LF
