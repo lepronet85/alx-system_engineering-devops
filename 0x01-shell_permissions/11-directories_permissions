@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R u=rw,go=rX *
+find . -type d -exec chmod a+x {} +
