@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | awk 'NR <= 11 {print $9}' | tail -n +2
+ls -tp | grep -v / | head -10
