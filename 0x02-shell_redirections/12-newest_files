@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type f -printf "%T@ %p\n" | sort -nr | head -n 10 | cut -d ' ' -f 2-
+ls -lt | awk 'NR <= 11 {print $9}' | tail -n +2
