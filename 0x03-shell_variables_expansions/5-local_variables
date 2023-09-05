@@ -1,2 +1,2 @@
 #!/bin/bash
-env | sort | column -t
+env | grep -v "^BASH"
