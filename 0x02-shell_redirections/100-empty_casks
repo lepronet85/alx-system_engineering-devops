@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -empty -o -type f -empty | sed -e 's|./||'
+find . -type d -empty -printf '%P\n' ; find . -type f -empty -printf '%P\n'
