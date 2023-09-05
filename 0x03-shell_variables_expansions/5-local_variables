@@ -1,2 +1,2 @@
 #!/bin/bash
-{ compgen -v; compgen -e; compgen -A function; } | while read var; do echo "$var=$(eval echo \$$var)"; done | sort -u
+env | sort | column -t
