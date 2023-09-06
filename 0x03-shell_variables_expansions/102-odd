@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR % 2 == 1 && /[13579]$/ {print}' input.txt
+grep -n '.*' | grep -E '^[0-9]+:[[:blank:]]*[0-9]*[13579]$' | cut -d':' -f2
