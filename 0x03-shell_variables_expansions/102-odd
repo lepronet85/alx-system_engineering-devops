@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d'\n' - - < <(ls -1) | cut -f1
+grep -n '.*' | grep -E '^[0-9]+:[[:blank:]]*([0-9]+[13579]|[13579])$' | cut -d':' -f2
