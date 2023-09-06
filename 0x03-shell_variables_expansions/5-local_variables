@@ -1,2 +1,2 @@
 #!/bin/bash
-env | grep -v "^BASH"
+set | grep -Ev "^(BASH|declare|function)"
