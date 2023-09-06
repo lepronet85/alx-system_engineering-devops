@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n '.*' | grep -E '^[0-9]+:[[:blank:]]*[0-9]*[13579]$' | cut -d':' -f2
+head -n `expr $1 / 2` | tail -n +1
