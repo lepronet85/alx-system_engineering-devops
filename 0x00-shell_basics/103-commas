@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -d */ . .. | sort)/$(ls -l | grep -v "^d" | awk '{print $9}')
+(ls -d */ . .. | sort -n | cut -d / -f1)/$(ls -l | grep -v "^d" | awk '{print $9}')
