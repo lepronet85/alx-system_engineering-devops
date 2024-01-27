@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Process manager for manage_my_process
+
+pid_file="/var/run/my_process.pid"
+
+case $1 in
+    "start")
+        # Start manage_my_process in the background and store its PID in a file
+        ./manage_my_process & > "$pid_file"
+        echo 'manage_my_process started';;
+    "restart")
+        # Stop the currently running manage_my_process
+        if [ -e "$pid_file" ]; then
+            id=$(cat "$pid_file")
+            kill -s SIGSTOP "$id"
+            rm "$pid_file"
+            echo 'manage_my_process stopped'
+        fi
+
+        # Start a new instance of manage_my_process and store its PID
+        ./manage_my_process & > "$pid_file"
+        echo 'manage_my_process restarted';;
+    "stop")
+        # Stop the currently running manage_my_process
+        if [ -e "$pid_file" ]; then
+            id=$(cat "$pid_file")
+            kill -s SIGSTOP "$id"
+            rm "$pid_file"
+            echo 'manage_my_process stopped'
+        else
+            echo 'No running manage_my_process found'
+        fi;;
+    *)
+        echo 'Usage: manage_my_process {start|stop|restart}';;
+esac
+
