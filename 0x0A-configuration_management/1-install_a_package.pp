@@ -5,7 +5,7 @@ package { 'flast':
   provider => 'pip3',
 }
 
-package { 'werzeug':
+package { 'werkzeug':
   ensure   => '2.1.1',
-  provider => 'gem',
+  provider => 'pip3',
 }
