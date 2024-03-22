@@ -1,6 +1,6 @@
 # install puppet-lint
 
-package { 'flast':
+package { 'flask':
   ensure   => '2.1.0',
   provider => 'pip3',
 }
