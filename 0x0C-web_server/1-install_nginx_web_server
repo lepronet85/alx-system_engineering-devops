@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script to install and configure Nginx on a web-01 server.
+# Nginx should be configured to listen on port 80.
+# When querying Nginx at its root / with a GET request (requesting a page)
+# using curl, it must return a page that contains the string Hello World!
+
+apt-get update
+apt-get install -y nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx restart
+
