@@ -1,13 +1,24 @@
 #!/usr/bin/python3
-"""
-0-main
-"""
-import sys
+"""function that queries the Reddit API and prints the titles
+of the first 10 hot posts listed for a given subreddit."""
 
 
-if __name__ == '__main__':
-    number_of_subscribers = __import__('0-subs').number_of_subscribers
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
-    else:
-        print("{:d}".format(number_of_subscribers(sys.argv[1])))
+def top_ten(subreddit):
+    """function that queries the Reddit API and prints the titles
+    of the first 10 hot posts listed for a given subreddit."""
+    import requests
+    import sys
+
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        response = requests.get(url, headers=headers,
+                                allow_redirects=False)
+        if response.status_code == 200:
+            children = response.json().get('data').get('children')
+            for i in range(10):
+                print(children[i].get('data').get('title'))
+        else:
+            print("None")
+    except Exception:
+        print("None")
