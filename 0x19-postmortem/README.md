@@ -1,6 +1,6 @@
 # Post-Mortem: The Great Application Meltdown of May 2024
 
-![Application Meltdown](https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg)
+![Application Meltdown](milky-way-2695569_960_720.jpg)
 
 ## Introduction:
 
@@ -83,5 +83,4 @@ Abdoul aziz
 
 P.S. Here's a picture of the Milky Way to remind you that even the darkest night has a bit of light. 🌌
 
-![Milky Way](https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg)
-
+![Milky Way](milky-way-2695569_960_720.jpg)
