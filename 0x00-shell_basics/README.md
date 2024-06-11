@@ -21,18 +21,24 @@ Display current directory contents in a long format
 
 Display current directory contents, including hidden files (starting with .). Use the long format.
 
-5. I love numbers
+## 5. I love numbers
 
 Display current directory contents.
 - Long format
 - with user and group IDs displayed numerically
 - And hidden files (starting with .)
 
-6. Welcome
+## 6. Welcome
 
 Create a script that creates a directory named my_first_directory in the /tmp/ directory.
 
-7. Betty in my first directory
+## 7. Betty in my first directory
 
 Move the file betty from /tmp/ to /tmp/my_first_directory.
+
+## 8. Bye bye Betty
+
+Delete the file betty.
+- The file betty is in /tmp/my_first_directory
+
 
